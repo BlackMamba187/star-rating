@@ -1,30 +1,41 @@
 .body {
-	font-family: 'Open Sans', sans-serif;
+	font-family: "Open Sans", sans-serif;
 	height: 90vh;
 	display: grid;
 	justify-content: center;
 	align-content: center;
 }
+.layout {
+	display: flex;
+	flex-direction: column;
+	transform: translateY(100%);
+	transition: 1s;
+}
+
+.card:hover .layout {
+	transition: 1s;
+	transform: translateY(30%);
+}
 
 .content {
-	display: flex;
-	flex-direction: column-reverse;
-	height: 100%;
 	opacity: 0;
-	transition: 1s;
+	transition: 0s;
 	z-index: 99;
 }
 
-.content:hover {
-	transition: 1s;
+.card:hover .layout .content {
 	opacity: 1;
+	transition: 1s;
+}
+
+.desc {
+	font-size: 20px;
+	padding-left: 10px;
+	padding-right: 10px;
+	color: white;
 }
 .title {
-	font-size: x-large;
-	
-}
-.desc {
-	padding-left: 1em;
-	padding-right: 1em;
-	color: white;
+	font-size: 28px;
+	padding-left: 20px;
+	padding-right: 20px;
 }

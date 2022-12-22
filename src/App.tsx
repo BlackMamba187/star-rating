@@ -56,21 +56,24 @@ function App() {
 				theme="light"
 			/>
 			<Card>
-				<div className="content">
-					<Button click={() => Submit(starRating)} />
-					<Stars
-						hover={(num) => setHover(num)}
-						rating={(num) => setStarRating(num)}
-						starRating={starRating}
-						starHover={hover}
-					/>
-					<p className="desc">
-						Miles Morales is juggling his life between being a high school
-						student and being a spider-man. When Wilson "Kingpin" Fisk uses a
-						super collider, others from across the Spider-Verse are transported
-						to this dimension.
-					</p>
+				<div className="layout">
 					<p className="desc title">Spider-Man: Into the Spider-Verse</p>
+					<div className="content">
+						<p className="desc">
+							Miles Morales is juggling his life between being a high school
+							student and being a spider-man. When Wilson "Kingpin" Fisk uses a
+							super collider, others from across the Spider-Verse are
+							transported to this dimension.
+						</p>
+						<Stars
+							hover={(num) => setHover(num)}
+							rating={(num) => setStarRating(num)}
+							starRating={starRating}
+							starHover={hover}
+						/>
+
+						<Button click={() => Submit(starRating)} />
+					</div>
 				</div>
 			</Card>
 		</div>
